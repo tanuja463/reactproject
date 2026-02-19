@@ -1,0 +1,213 @@
+/* 🌿 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌿 Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8fa;
+  overflow-x: hidden;
+  /* prevents side scroll */
+}
+
+/* 🌿 Remove default Bootstrap container spacing issue */
+.container {
+  padding-top: 12px;
+  padding-bottom: 5px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  width: 100%;
+  height: 65vh;
+  background: url("https://images.unsplash.com/photo-1471193945509-9ad0617afabf") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+/* Dark overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin: 15px 0 25px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  min-height: 55px;
+}
+
+.navbar-brand {
+  font-size: 20px !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 128, 0, 0.15);
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-success {
+  background-color: #2e7d32;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #1b5e20;
+  transform: scale(1.05);
+}
+
+/* ================= COMPACT FOOTER ================= */
+
+.footer {
+  background-color: #1b5e20;
+  color: white;
+  padding: 12px 0;   /* 🔥 much smaller */
+}
+
+.footer .container {
+  padding: 0 15px;
+}
+
+.footer-title,
+.footer-heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #e8f5e9;
+  margin-bottom: 4px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.footer hr {
+  margin: 6px 0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  font-size: 11px;
+}
+
+/* ================= CATEGORY SECTION ================= */
+
+.category-section {
+  padding: 0px 0;
+  background: linear-gradient(to bottom, #f1f8f4, #ffffff);
+}
+
+.category-section h2 {
+  font-weight: 600;
+  font-size: 34px;
+  color: #1b5e20;
+}
+
+/* Category Card */
+
+.category-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.category-img {
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.08);
+}
+
+.category-card .card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.category-card .card-title {
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.category-card .card-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(46, 125, 50, 0.2);
+}
